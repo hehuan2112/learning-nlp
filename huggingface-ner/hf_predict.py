@@ -5,7 +5,6 @@ from transformers import pipeline
 from transformers import AutoTokenizer
 from transformers import AutoModelForTokenClassification
 
-from spacy import displacy
 
 # load model and build a nlp pipeline
 model = AutoModelForTokenClassification.from_pretrained('./fine-tuned-model/covid19_symp_model')
