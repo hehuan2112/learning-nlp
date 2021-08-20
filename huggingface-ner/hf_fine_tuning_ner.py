@@ -52,7 +52,11 @@ def fine_tune(dataset_fn,
             arr_offset = np.array(doc_offset)
 
             # set labels whose first offset position is 0 and the second is not 0
-            doc_enc_labels[(arr_offset[:,0] == 0) & (arr_offset[:,1] != 0)] = doc_labels
+            try:
+                doc_enc_labels[(arr_offset[:,0] == 0) & (arr_offset[:,1] != 0)] = doc_labels
+            except:
+                print("* TEXT ENCODING ERROR")
+
             encoded_labels.append(doc_enc_labels.tolist())
 
         return encoded_labels
