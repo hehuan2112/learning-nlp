@@ -30,4 +30,6 @@ python hf_predict.py
 
 We also prepared a jupyter notebook to show the whole process.
 In this notebook, we use spaCy to visualize the prediction result.
-The predicted entities will be marked as HTML for display.
+The predicted entities will be marked as HTML for display and it will look like the following:
+
+![NER Results](./img/NER-Results.jpg)
